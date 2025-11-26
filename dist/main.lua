@@ -4303,27 +4303,37 @@ am.Size=aq.Size
 am.AutomaticSize=Enum.AutomaticSize.None
 al.Size=aq.Size
 
+aj.Size=UDim2.new(0,36,0,36)
+
+ak.Size=UDim2.new(0,1,0,28)
+ak.Position=UDim2.new(0,36,0.5,0)
+ak.AnchorPoint=Vector2.new(0,0.5)
+
 local innerBtn=am.TextButton
+innerBtn.Size=UDim2.new(0,aq.Size.X.Offset-44,0,36)
 innerBtn.AutomaticSize=Enum.AutomaticSize.None
-innerBtn.Size=UDim2.new(1,-40,1,0)
 
-ai.AutomaticSize=Enum.AutomaticSize.None
-ai.Size=UDim2.new(1,0,1,0)
-ai.TextScaled=true
-ai.TextWrapped=false
-ai.ClipsDescendants=true
-
-local constraint=ai:FindFirstChildOfClass("UITextSizeConstraint")
-if not constraint then
-constraint=Instance.new("UITextSizeConstraint")
-constraint.Parent=ai
+local innerPadding=innerBtn:FindFirstChildOfClass("UIPadding")
+if innerPadding then
+innerPadding.PaddingLeft=UDim.new(0,6)
+innerPadding.PaddingRight=UDim.new(0,6)
 end
-constraint.MaxTextSize=17
-constraint.MinTextSize=10
 
 if ah and ah.Parent then
-ah.Size=UDim2.new(0,18,0,18)
+ah.Size=UDim2.new(0,16,0,16)
 end
+
+local availWidth=aq.Size.X.Offset-44-12
+if ah and ah.Parent then availWidth=availWidth-20 end
+
+ai.Size=UDim2.new(0,availWidth,0,20)
+ai.AutomaticSize=Enum.AutomaticSize.None
+ai.TextSize=14
+ai.TextScaled=false
+ai.TextWrapped=false
+ai.TextTruncate=Enum.TextTruncate.AtEnd
+ai.TextXAlignment=Enum.TextXAlignment.Left
+ai.TextYAlignment=Enum.TextYAlignment.Center
 end
 end
 if an then
