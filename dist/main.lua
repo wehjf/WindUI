@@ -4293,9 +4293,14 @@ or ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff"),
 Size=ap.Size,
 }
 
+local buttonHeight = 44
 if aq.Size and typeof(aq.Size)=="number" then
-am.Size=UDim2.new(0,am.AbsoluteSize.X,0,aq.Size)
+buttonHeight = aq.Size
 end
+am.Size=UDim2.new(0,0,0,buttonHeight)
+am.AutomaticSize=Enum.AutomaticSize.X
+am.TextButton.Size=UDim2.new(0,0,0,36)
+am.TextButton.AutomaticSize=Enum.AutomaticSize.X
 
 
 
