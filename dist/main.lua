@@ -1,3 +1,4 @@
+
 --[[
      _      ___         ____  ______
     | | /| / (_)__  ___/ / / / /  _/
@@ -4196,7 +4197,7 @@ VerticalAlignment="Center",
 }),
 
 ac("TextButton",{
-AutomaticSize="XY",
+AutomaticSize="X",
 Active=true,
 BackgroundTransparency=1,
 Size=UDim2.new(0,0,0,36),
