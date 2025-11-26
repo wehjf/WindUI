@@ -9433,7 +9433,7 @@ Icon=ak.Icon,
 IconThemed=ak.IconThemed,
 Opened=ak.Opened or false,
 
-HeaderSize=ak.Desc and 0 or 42,
+HeaderSize=ak.Desc and 56 or 42,
 IconSize=18,
 
 Expandable=false,
@@ -9531,16 +9531,16 @@ SliceCenter=Rect.new(128,128,128,128)
 end
 
 local as=af("Frame",{
-Size=ap.Desc and UDim2.new(1,0,0,0) or UDim2.new(1,0,0,ap.HeaderSize),
-AutomaticSize=ap.Desc and"Y"or"None",
+Size=UDim2.new(1,0,0,ap.HeaderSize),
+AutomaticSize="None",
 BackgroundTransparency=1,
 Parent=al,
-ClipsDescendants=false,
+ClipsDescendants=true,
 },{
 au,
 af("TextButton",{
-Size=ap.Desc and UDim2.new(1,0,0,0) or UDim2.new(1,0,0,ap.HeaderSize),
-AutomaticSize=ap.Desc and"Y"or"None",
+Size=UDim2.new(1,0,0,ap.HeaderSize),
+AutomaticSize="None",
 BackgroundTransparency=1,
 Text="",
 },{
@@ -9585,7 +9585,7 @@ Size=UDim2.new(1,0,0,0),
 AutomaticSize="Y",
 Name="Content",
 Visible=true,
-Position=ap.Desc and UDim2.new(0,0,1,0)or UDim2.new(0,0,0,ap.HeaderSize)
+Position=UDim2.new(0,0,0,ap.HeaderSize)
 },{
 af("UIListLayout",{
 FillDirection="Vertical",
@@ -9608,15 +9608,9 @@ end
 function ap.Open(au)
 if ap.Expandable then
 ap.Opened=true
-if ap.Desc then
-ah(as,0.33,{
-Size=UDim2.new(1,0,0,as.TextButton.AbsoluteSize.Y+(as.Content.AbsoluteSize.Y/an))
-},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-else
 ah(as,0.33,{
 Size=UDim2.new(1,0,0,ap.HeaderSize+(as.Content.AbsoluteSize.Y/an))
 },Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-end
 
 ah(ar.ImageLabel,0.1,{Rotation=180},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 end
@@ -9624,15 +9618,9 @@ end
 function ap.Close(au)
 if ap.Expandable then
 ap.Opened=false
-if ap.Desc then
-ah(as,0.26,{
-Size=UDim2.new(1,0,0,as.TextButton.AbsoluteSize.Y)
-},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-else
 ah(as,0.26,{
 Size=UDim2.new(1,0,0,ap.HeaderSize)
 },Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-end
 ah(ar.ImageLabel,0.1,{Rotation=0},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 end
 end
