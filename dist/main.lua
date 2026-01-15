@@ -3209,7 +3209,7 @@ Valentine = {
     Background = Color3.fromHex("#24121f"),
     Button = Color3.fromHex("#de4c7d"),
     Icon = Color3.fromHex("#ffd6e6"),
-}
+},
 Horizon = {
     Name = "Horizon",
     Accent = Color3.fromHex("#FEA82F"),
