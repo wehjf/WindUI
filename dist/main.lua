@@ -3201,14 +3201,14 @@ Icon=Color3.fromHex"#dc2626",
 
 Valentine = {
     Name = "Valentine",
-    Accent      = Color3.fromHex("#FF487A"),
-    Dialog      = Color3.fromHex("#7B1532"),
-    Outline     = Color3.fromHex("#FDB7D6"),
-    Text        = Color3.fromHex("#FFF3F8"),
-    Placeholder = Color3.fromHex("#FB6491"),
-    Background  = Color3.fromHex("#340D1F"),
-    Button      = Color3.fromHex("#F2537A"),
-    Icon        = Color3.fromHex("#FCA3C0"),
+    Accent      = Color3.fromHex("#FD2748"),  -- a strong reddish accent
+    Dialog      = Color3.fromHex("#A22B43"),  -- a rich romantic red for dialog
+    Outline     = Color3.fromHex("#FF99BB"),  -- pinker outline
+    Text        = Color3.fromHex("#FFF3F8"),  -- light text for good contrast
+    Placeholder = Color3.fromHex("#FDAEB7"),  -- lighter pink for placeholder
+    Background  = Color3.fromHex("#851220"),  -- dark but clearly red, not purple
+    Button      = Color3.fromHex("#F74666"),  -- bright valentine button
+    Icon        = Color3.fromHex("#FFD6DB"),  -- very light pink for icons
 },
 Horizon = {
     Name = "Horizon",
